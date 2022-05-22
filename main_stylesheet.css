@@ -179,7 +179,7 @@ a {
         display: display;
         margin: auto;
         padding: 2%;
-        height: 100%;
+        height: auto;
         background: #dbb582ff;
         font-size: 1.2em;
     }
@@ -189,6 +189,37 @@ a {
             font-size: 20px;
             height: auto;
             color: #4d4375;
+        }
+
+.galleryGrid {
+    margin: 2%;
+    display: grid;
+    column-gap: 2%;
+    row-gap: 2%;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    overflow: hidden;
+}
+    .galleryTile {
+        display: block;
+        border-radius: 4px;
+        border: 5px solid whitesmoke;
+
+    }
+        .galleryTile img {
+            width: 100%;
+            height: 100%;
+            object-fit:cover;
+            object-position: center;
+        }
+
+    .galleryBlurb {
+        display: block;
+        margin: auto;
+    }
+        .galleryBlurb p {
+            text-align: left;
+            padding: 3%;
         }
 
 /* Footer Tab */
@@ -228,6 +259,9 @@ a {
     .grid {
         grid-template-columns: 1fr;
     }
+    .galleryGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
     .container {
         margin: 3% 5%;
     }
@@ -256,8 +290,13 @@ a {
 /*  Single column style with the site navigation links HIDDEN
     Meant for mobile phones */
 @media screen and (max-width:700px) {
-    .grid {
+
+    .galleryGrid {
+        display: table;
         grid-template-columns: 1fr;
+    }
+    .galleryBlurb p {
+        text-align: center;
     }
     .container {
         margin: 2%;
@@ -268,19 +307,8 @@ a {
     .navigation {
         display: none;
     }
-    /* Don't need thiss
-    .navigation span {
-        margin: 0;
-        text-align: center;
-    }*/
 
-    .leftColumn p, .leftColumn h1 {
-        text-align: center;
-        padding: 0 6%;
-    }
     .titleBackdrop {
-        margin: auto;
-        margin-top: 20px;
         height: 75px;
         width: 400px;
     }
