@@ -156,6 +156,7 @@ a {
 
 /* Green Column */
 .navigation {
+    display: block;
     width: 100%;
     background-color: #adffedff;
 }
@@ -213,8 +214,16 @@ a {
     }
 
 
-/* Adapt to small browser window */
-@media screen and (max-width:1400px) {
+/*  Reduce margin */
+@media screen and (max-width:1500px) {
+    .container {
+        margin: 3% 7%;
+    }
+}
+
+/*  Single column style website
+    Meant for small browser windows */
+@media screen and (max-width:1200px) {
     .grid {
         grid-template-columns: 1fr;
     }
@@ -243,19 +252,27 @@ a {
     }
 }
 
-/* Adapt to mobile screen */
+/*  Single column style with the site navigation links HIDDEN
+    Meant for mobile phones */
 @media screen and (max-width:700px) {
     .grid {
         grid-template-columns: 1fr;
     }
     .container {
-        margin: 0;
+        margin: 2%;
         overflow: hidden;
     }
+    /* Hide navigation entirely on mobile
+       At least until I fix the anchor # breaking on tiny screens!) */
+    .navigation {
+        display: none;
+    }
+    /* Don't need thiss
     .navigation span {
         margin: 0;
         text-align: center;
-    }
+    }*/
+
     .leftColumn p, .leftColumn h1 {
         text-align: center;
         padding: 0 6%;
