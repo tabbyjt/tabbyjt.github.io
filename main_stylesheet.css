@@ -1,14 +1,54 @@
 
 /*
     DATE: 23 / 05 / 22
-    TIME: 12:40am
+    TIME: 10:58pm
 */
 html {
     scroll-behavior: smooth;
   }
+  
 body {
     background-color: #ffab40ff;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: repeat-y;
+    background-image: url(https://tabby-jt.neocities.org/Images/orangeDiagonalPattern.png);
 }
+
+.floatingLeft,
+.floatingRight {
+    display: block;
+    margin: auto;
+    position: absolute;
+    z-index: 2;
+    text-align: center;
+}
+    .floatingLeft img,
+    .floatingRight img {
+        width: 70%;
+        height: 70%;
+    }
+
+.floatingLeft { left: 10%; }
+.floatingRight { right: 10%; }
+
+    
+
+/* Apply animation! */
+.buttonBackdrop,
+.labelBackdrop-blue,
+.labelBackdrop-green,
+.labelBackdrop-latte,
+.titleBackdrop,
+.floatingLeft img,
+.floatingRight img {
+    -o-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+
+}
+
 h1 {
     padding: 0px 40px;
     font-family:"Rubik Mono One", sans-serif;
@@ -35,6 +75,7 @@ a {
         top: 300px;
         visibility: hidden;
     }
+    
 
 iframe {
     padding: .5%;
@@ -49,6 +90,12 @@ iframe {
     border-spacing: 0;
     border-collapse: collapse;
     overflow: auto;
+    background: #FEBE5B;
+
+    -o-transition: height 2s ease-in-out;
+    -moz-transition: height 2s ease-in-out;
+    -webkit-transition: height 2s ease-in-out;
+    transition: height 2s ease-in-out;
 }
 
 /* Image Banner */
@@ -69,14 +116,13 @@ iframe {
     height: 113px;
     width: 600px;
 }
-.glitterText {
-    background: url(https://tabby-jt.neocities.org/Images/glitterText.gif);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 100%;
-}
+    .titleBackdrop img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
 
 /* Button zone */
 .buttonTray {
@@ -85,40 +131,74 @@ iframe {
 }
     .buttonBackdrop {
         display: inline-block;
-        margin: 3% 2% 3% 0; /* Space around each individual button */
+        margin: 4% 2% 3% 0; /* Space around each individual button */
         padding: 7px; /* Space between button outline and image inside */
         width: 60px;
         height: 60px;
         border-radius: 25px;
+        border: none rgb(183, 226, 247);
         background: #c942f4ff;
     }
         .buttonBackdrop:hover{
+            margin-top: 0%;
             background: #45b0e2ff;
+            border: 4px solid rgb(183, 226, 247);
+            box-shadow: -5px -5px rgb(183, 226, 247);
         }
 
 /* Label style links */
-.labelBackdrop {
+.labelBackdrop-green {
+    background: #16ac72ff;
+} .labelBackdrop-green h1 {
+    color: #adffedff;
+}
+.labelBackdrop-blue {
+    background: #45b0e2ff;
+} .labelBackdrop-blue h1 {
+    color: rgb(183, 226, 247);
+}
+.labelBackdrop-latte {
+    background: #dbb582ff;
+} .labelBackdrop-latte h1 {
+    color: #fce5cdff;
+}
+
+
+.labelBackdrop-green,
+.labelBackdrop-latte,
+.labelBackdrop-blue {
     display: inline-block;
     height: 100%;
     margin: 0;
+    margin-bottom: 4px;
     padding: 0.3% 1%;
     border-radius: 20px;
-    background: #16ac72ff;
+ 
 }
-    .labelBackdrop h1 {
+    .labelBackdrop-green h1,
+    .labelBackdrop-latte h1,
+    .labelBackdrop-blue h1 {
         margin: 0;
         margin-top: 6px;
         padding: 0;
-        color: #adffedff;
         font-size: 1.2em;
         text-decoration: underline;
     }
-    .labelBackdrop:hover {
-        background: #c942f4ff;
-    }
-    .labelBackdrop h1:hover {
+
+.labelBackdrop-green:hover,
+.labelBackdrop-latte:hover,
+.labelBackdrop-blue:hover {
+    margin-bottom: 0;
+    background: #c942f4ff;
+    border: 4px solid #e287ffff;
+    box-shadow: -5px -5px #e287ffff;
+}
+    .labelBackdrop-green h1:hover,
+    .labelBackdrop-latte h1:hover,
+    .labelBackdrop-blue h1:hover {
         color: #e287ffff;
     }
+
 
 /* Social links */
 .instaLogo {
@@ -157,7 +237,7 @@ iframe {
     width: 100%;
     background-color: #e287ffff;
     overflow: visible;
-    z-index: 100;
+    z-index: 1;
 }
 
 /* Green Column */
@@ -165,11 +245,16 @@ iframe {
     display: block;
     width: 100%;
     background-color: #adffedff;
+
 }
     .navigation span {
         margin: 0 100%;
         text-align: right;
     }
+    .navigation h1:hover {
+        text-shadow: -6px -3px orange;
+    }
+
 
 /* Tab Content */
 .tabContainer {
@@ -203,7 +288,7 @@ iframe {
     row-gap: 2%;
     grid-template-rows: repeat(1, 1fr);
     grid-template-columns: repeat(3, 1fr);
-    overflow: hidden;
+    
 }
     .galleryTile {
         display: block;
@@ -212,9 +297,10 @@ iframe {
 
     }
         .galleryTile img {
+            display: block;
             width: 100%;
             height: 100%;
-            object-fit:cover;
+            object-fit: cover;
             object-position: center;
         }
 
@@ -253,19 +339,34 @@ iframe {
 
 /*  Reduce margin */
 @media screen and (max-width:1500px) {
+    .floatingLeft { left: 1px; }
+    .floatingRight { right: 1px; }
     .container {
         margin: 3% 7%;
     }
+
 }
 
 /*  Single column style website
     Meant for small browser windows */
 @media screen and (max-width:1200px) {
+    .floatingLeft { left: 0; }
+    .floatingRight { right: 0; }
+    .floatingLeft img,
+    .floatingRight img {
+        width: 50%;
+        height: 50%;
+    }
     .grid {
         grid-template-columns: 1fr;
     }
     .galleryGrid {
-        grid-template-columns: repeat(2, 1fr);
+        display: table;
+        grid-template-columns: 1fr;
+    }
+    .galleryTile,
+    .galleryBlurb {
+        margin: 2% 0%;
     }
     .container {
         margin: 3% 5%;
@@ -295,12 +396,13 @@ iframe {
 /*  Single column style with the site navigation links HIDDEN
     Meant for mobile phones */
 @media screen and (max-width:700px) {
+
+    .floatingLeft,
+    .floatingRight {
+        display: none;
+    }   
     iframe {
         width: 208px;
-    }
-    .galleryGrid {
-        display: table;
-        grid-template-columns: 1fr;
     }
     .galleryBlurb p {
         text-align: center;
@@ -337,6 +439,14 @@ iframe {
     }
     .footer {
         margin: auto;
+    }
+
+    @media screen and (max-width:460px) {
+        .titleBackdrop {
+            height: 66px;
+            width: 350px;
+        }
+
     }
 
 }

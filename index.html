@@ -3,7 +3,7 @@
 
     <!--
     DATE: 23 / 05 / 22
-    TIME: 12:40am
+    TIME: 10:58pm
     -->
 
     <head>
@@ -16,48 +16,41 @@
             /* Hide or show content */
             function toggleTab() {
                 var x = document.getElementById("tab");
+                var y = document.getElementById("floatingInTab");
 
                 if (!x.style.display || x.style.display == "none"){
                     x.style.display = "block";
+                    y.style.display = "block"
                 } else {
                     x.style.display = "none";
+                    y.style.display = "none"
                 }
             }
-
+            /* Only SHOW content */
             function openTab() {
                 var x = document.getElementById("tab");
+                var y = document.getElementById("floatingInTab");
+
                 if (!x.style.display || x.style.display == "none"){
                     x.style.display = "block";
+                    y.style.display = "block"
                 }
             }
-
-            function clearHash(){
-                history.replaceState(null, null, ' ');
-            }
-
-            /* Attatch iframe width property to the CSS width */
-            $(itchioWidget).width = 3;
-
-            /* Store the vertacle scroll position */
-            window.addEventListener("scroll",function(){
-                var scroll = window.scrollY;
-                document.getElementsByClassName("a.anchor").top =-scroll;
-            });
         </script>
     </head>
 
     <body>
 
         <!-- Holds almost ALL content on the page -->
-        <div class="container">
+        <div id="container" class="container">
             <div class="headerImage"></div>
             <div class="grid">
                 <!-- Left Column content -->
                 <div class="leftColumn">
 
                     <!-- Glitter text title -->
-                    <div class="titleBackdrop">
-                        <div class="glitterText"></div>
+                    <div class="titleBackdrop" style="text-align: center;">
+                        <img src="https://tabby-jt.neocities.org/Images/tabbyspage-stars.png">
                     </div>
 
                     <!-- Header text -->
@@ -68,7 +61,7 @@
 
                     <!-- Paragraph text -->
                     <p style="padding-bottom: 3%;">
-                        Can't firmament good tree Fruitful had divide own meat heaven night place doesn't waters creature forth beginning for divided. Give.
+                        Genderqueer aussie artist & developer. Working on illustration, small games and digital toys. Living on stolen Wurundjeri lands. They/he &#9825;
                     </p>
                     
                     <!-- Social buttons -->
@@ -107,8 +100,10 @@
 
                 <div id="art" class="headerImage" style="background-image:url(https://tabby-jt.neocities.org/Images/wickLeap.png); background-position:top;"></div>
                 <div class="tabSection" style="background: #adffedff;"><span>
-                    <h1 style="display: inline;">Artwork</h1><div class="labelBackdrop">
-                            <h1><i class="fa fa-link"></i>insta</h1></div></span>
+                    <h1 style="display: inline; color: #e287ffff;">Artwork</h1>
+                    <a href="https://www.instagram.com/wilderwhine/"><div class="labelBackdrop-green">
+                            <h1><i class="fa fa-link"></i>insta</h1>
+                    </div></a></span>
                 </div>
                 <div class="tabSection" style="background: white;">
 
@@ -141,11 +136,12 @@
 
 
                 <div id="design" class="headerImage" style="background-image:url(https://tabby-jt.neocities.org/Images/tigerBanner.png);"></div>
-                <div class="tabSection" style="background: #adffedff;"><span>
-                    <h1 style="display: inline;">Design</h1><div class="labelBackdrop">
+                <div class="tabSection" style="background: #c1c5fc;"><span>
+                    <h1 style="display: inline; color: #8e96f1;">Design</h1>
+                    <a href="#container"><div class="labelBackdrop-latte">
                         <h1><i class="fa fa-link"></i>link</h1></div></span>
-                </div>
-                <div class="tabSection" style="background: white;">
+                </div></a>
+                <div class="tabSection" style="background: #e6e8ff;">
                      <!-- Art image gallery -->
                      <div class="galleryGrid">
                         <div class="galleryBlurb">
@@ -177,11 +173,12 @@
                 </div>
 
                 <div id="games" class="headerImage" style="background-image:url(https://tabby-jt.neocities.org/Images/twistascopeBanner.png);"></div>
-                <div class="tabSection" style="background: #adffedff;"><span>
-                    <h1 style="display: inline;">Games</h1><div class="labelBackdrop">
+                <div class="tabSection" style="background: #00ffc7ff;"><span>
+                    <h1 style="display: inline;">Games</h1>
+                    <a href="https://dinosaur-jortz.itch.io/"><div class="labelBackdrop-blue">
                         <h1><i class="fa fa-link"></i>itch.io</h1></div></span>
-                </div>
-                <div class="tabSection" style="background: white; text-align: center;">
+                </div></a>
+                <div class="tabSection" style="background: #adffedff; text-align: center;">
                     <p style="padding-bottom:1%;">May I offer you.... Viddy game? There has to be some duplicates here while I'm sorting this sites structure out.<br></p>
 
                     <iframe src="https://itch.io/embed/1533197?dark=true" height="167" frameborder="0"><a href="https://dinosaur-jortz.itch.io/dragon-painter-pro">Dragon Painter [PRO] by tabby</a></iframe>
@@ -206,6 +203,18 @@
                 <p><i class="fa fa-chevron-down"></i></p>
             </div>
         </div>
+
+        <!-- Floating objects-->
+        <div class="floatingRight" style="top: 10%;"><img src="https://tabby-jt.neocities.org/Images/sparkles-1.png"></div>
+        <div class="floatingLeft" style="top: 80%;"><img src="https://tabby-jt.neocities.org/Images/sparkles-1.png"></div>
+        <div class="floatingRight" style="bottom: 3%;"><img src="https://tabby-jt.neocities.org/Images/sparkles-1.png"></div>
+
+        <div id="floatingInTab" style="display:none;">
+            <div class="floatingLeft" style="top: 160%;"><img src="https://tabby-jt.neocities.org/Images/sparkles-1.png"></div>
+            <div class="floatingRight" style="top: 180%;"><img src="https://tabby-jt.neocities.org/Images/sparkles-1.png"></div>
+            <div class="floatingLeft" style="top: 230%;"><img src="https://tabby-jt.neocities.org/Images/sparkles-1.png"></div>
+        </div>
+
     </body>
 </html>
 
