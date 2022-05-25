@@ -12,7 +12,7 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-repeat: repeat-y;
-    background-image: url(https://tabby-jt.neocities.org/Images/orangeDiagonalPattern.png);
+    background-image: url(http://drive.google.com/uc?export=view&id=1l0X9z7W3-gkCbMW9HvWjUY5Q83Zk5rQk);
 }
 
 .floatingLeft,
@@ -80,6 +80,7 @@ a {
 iframe {
     padding: .5%;
     width: 552px;
+    margin: auto;
 }
 
 /* Main Container */
@@ -103,7 +104,7 @@ iframe {
     display: block;
     background-position: center;
     background-size: cover;
-    background-image: url(https://tabby-jt.neocities.org/Images/tigerBanner.png);
+    background-image: url(http://drive.google.com/uc?export=view&id=1xH2yMfiOHikMRVU_NvFVsyZm6bJuGm_w);
     height: 190px;
 }
 
@@ -202,13 +203,13 @@ iframe {
 
 /* Social links */
 .instaLogo {
-    background: url(https://tabby-jt.neocities.org/Images/instagram-Logo-White.png);
+    background: url(http://drive.google.com/uc?export=view&id=1hepNgWRejpMHmrGuoUcet3EvJilEkVZU);
 }
 .tumblrLogo {
-    background: url(https://tabby-jt.neocities.org/Images/tumblr-Logo-White.png);
+    background: url(http://drive.google.com/uc?export=view&id=16jH1oc3F-woQ5OisAxPkBV7H6UWxU85m);
 }
 .twitterLogo {
-    background: url(https://tabby-jt.neocities.org/Images/twitter-Logo-White.png);
+    background: url(http://drive.google.com/uc?export=view&id=1uPoM_y3UVSDrhNDDXexn1OMJcUK_Wcqx);
 }
 .instaLogo,
 .tumblrLogo,
