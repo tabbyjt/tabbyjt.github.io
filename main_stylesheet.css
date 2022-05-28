@@ -208,11 +208,15 @@ iframe {
 .tumblrLogo {
     background: url(Images/Tumblr-Logo_White.png);
 }
+.itchioLogo {
+    background: url(Images/Itchio-Logo-White.png);
+}
 .twitterLogo {
     background: url(Images/Twitter-Logo-White.png);
 }
 .instaLogo,
 .tumblrLogo,
+.itchioLogo,
 .twitterLogo {
     margin: 5%;
     background-repeat: no-repeat;
