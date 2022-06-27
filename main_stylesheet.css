@@ -170,8 +170,7 @@ iframe {
 .labelBackdrop-blue {
     display: inline-block;
     height: 100%;
-    margin: 0;
-    margin-bottom: 4px;
+    margin: 0px; /* does nothing? */
     padding: 0.3% 1%;
     border-radius: 20px;
  
@@ -189,7 +188,8 @@ iframe {
 .labelBackdrop-green:hover,
 .labelBackdrop-latte:hover,
 .labelBackdrop-blue:hover {
-    margin-bottom: 0;
+    margin: 0px;
+    padding: 0%;
     background: #c942f4ff;
     border: 4px solid #e287ffff;
     box-shadow: -5px -5px #e287ffff;
