@@ -418,13 +418,36 @@ iframe {
     }
     /* Hide navigation entirely on mobile
        At least until I fix the anchor # breaking on tiny screens!) */
-    .navigation {
+    .navigation h1,
+    .tabSection h1,
+    .labelBackdrop h1,
+    .labelBackdrop-blue h1,
+    .labelBackdrop-green h1,
+    .labelBackdrop-latte h1 {
+        /*display: none;*/
+        font-size: 30px;
+    }
+    .titleBackdrop {
         display: none;
     }
-
+    /*
     .titleBackdrop {
-        height: 75px;
-        width: 400px;
+        margin: auto;
+        height: 75px; 
+        width: 100%;
+    }*/
+    .titleBackdrop img {
+        margin: auto;
+        height: auto;
+        width: 100%;
+    }
+    .leftColumn h1 {
+        font-size:30px;
+        overflow-wrap: normal;
+    }
+    .leftColumn p {
+        font-size:20px;
+        overflow:auto;
     }
     .buttonBackdrop {
         margin-top: 4%;
